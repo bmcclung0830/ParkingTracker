@@ -4,38 +4,45 @@ import java.util.ArrayList;
  * Created by Brittany on 4/22/16.
  */
 public class ParkingSpot {
+    String address;
+    String street;
+    String city;
+    String state;
     String longitude;
     String latitude;
-    String address;
-    ArrayList<ParkingSpot> parkingSpots = new ArrayList<>();
 
-    public ParkingSpot(String longitude, String latitude, String address) {
-        this.longitude = longitude;
-        this.latitude = latitude;
-        this.address = address;
+    public ParkingSpot(String street, String city, String state) {
+        this.street = street;
+        this.city = city;
+        this.state = state;
     }
 
-    public String getLongitude() {
-        return longitude;
+    public String getStreet() {
+        return street;
     }
 
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public String getCity() {
+        return city;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getAddress() {
-        return address;
+    public String getState() {
+        return state;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s, %s \n", street, city, state);
     }
 }
